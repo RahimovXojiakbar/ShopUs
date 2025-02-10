@@ -6,6 +6,7 @@ from .forms import CommentForm
 def index_view(request):
     return render(request, 'home.html')
 
+<<<<<<< HEAD
 def product_detail(request,uuid):
     product = get_object_or_404(Product, uuid=uuid)
     comments = product.comments.all()
@@ -24,3 +25,7 @@ def product_detail(request,uuid):
         'comments': comments,
         'form': form,
     })
+=======
+def detail_view(request):
+    return render(request, 'product-detail.html')
+>>>>>>> b67f6800eb91572785243a1f4cfed23695df9496
