@@ -8,24 +8,24 @@ class BigCategoryAdmin(ModelAdmin):
     search_fields = ['name']
 
 
-@admin.register(models.MiddleCategory)
-class MiddleCategoryAdmin(ModelAdmin):
+@admin.register(models.Comment)
+class CommentAdmin(ModelAdmin):
+    list_display = ('uuid', 'name', 'product', 'created_at')
+    search_fields = ('name', 'product__name')
+
+
+
+@admin.register(models.SmallCategory)
+class SmallCategoryAdmin(ModelAdmin):
     list_display = ['name', 'big_category']
     search_fields = ['name']
     list_filter = ['big_category']
 
 
-@admin.register(models.SmalllCategory)
-class SmallCategoryAdmin(ModelAdmin):
-    list_display = ['name', 'middle_category']
-    search_fields = ['name']
-    list_filter = ['middle_category']
-
-
 @admin.register(models.Product)
 class ProductAdmin(ModelAdmin):
-    list_display = ['name', 'big_category', 'middle_category', 'small_category', 'price']
+    list_display = ['uuid','name', 'big_category', 'small_category', 'price']
     search_fields = ['name']
-    list_filter = ['big_category', 'middle_category', 'small_category']
+    list_filter = ['uuid', 'big_category', 'small_category']
 
 
