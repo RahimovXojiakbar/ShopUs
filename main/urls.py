@@ -1,9 +1,10 @@
 from . import views
 from django.urls import path    
-from .views import product_detail
+from .import views
 
 urlpatterns = [
    path('', views.index_view),
-   path('product/<str:uuid>/', product_detail, name='product_detail')
+   path('comment/<str:uuid>/', views.comment_view, name='comment'),
+   path('detail/', views.detail_view, name='product-detail')
 ]
 

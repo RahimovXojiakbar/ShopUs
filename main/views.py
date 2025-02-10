@@ -6,7 +6,7 @@ from .forms import CommentForm
 def index_view(request):
     return render(request, 'home.html')
 
-def product_detail(request,uuid):
+def comment_view(request,uuid):
     product = get_object_or_404(Product, uuid=uuid)
     comments = product.comments.all()
     form = CommentForm()
@@ -17,10 +17,13 @@ def product_detail(request,uuid):
             comment = form.save(commit=False)
             comment.product = product
             comment.save()
-            return redirect('product_detail', uuid=product.uuid)
+            return redirect('comment', uuid=product.uuid)
 
-    return render(request, 'product_detail.html', {
+    return render(request, 'comment.html', {
         'product': product,
         'comments': comments,
         'form': form,
     })
+
+def detail_view(request):
+    return render(request, 'product-detail.html')
