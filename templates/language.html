@@ -1,0 +1,14 @@
+{% load i18n %}
+
+
+<div class="container">
+    <center><h3>{{text}}</h3></center>
+    <ul class="list-group list-group-horizontal-xxl">
+        {% for i in products %}
+        <li class="list-group-item">{{i.name}}</li>
+        <p>{{i.big_category}}</p>
+
+        {% endfor %}
+        
+    </ul>
+</div>

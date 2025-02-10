@@ -1,0 +1,5 @@
+env
+main/__pycache__/**
+config/__pycache__/**
+db.sqlite3
+media/
