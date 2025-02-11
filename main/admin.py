@@ -4,7 +4,7 @@ from . import models
 
 @admin.register(models.Bigcategory)
 class BigCategoryAdmin(ModelAdmin):
-    list_display = ['name']
+    list_display = ['uuid', 'name']
     search_fields = ['name']
 
 
@@ -17,7 +17,7 @@ class CommentAdmin(ModelAdmin):
 
 @admin.register(models.SmallCategory)
 class SmallCategoryAdmin(ModelAdmin):
-    list_display = ['name', 'big_category']
+    list_display = ['uuid', 'name', 'big_category']
     search_fields = ['name']
     list_filter = ['big_category']
 
