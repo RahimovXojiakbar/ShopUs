@@ -205,6 +205,7 @@ class Bigcategory(BaseModel):
 
     class Meta:
         ordering = ['-created']
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 class SmallCategory(BaseModel):
@@ -228,7 +229,7 @@ class SmallCategory(BaseModel):
 
 class Product(BaseModel):
     big_category = models.ForeignKey(Bigcategory, on_delete=models.SET_NULL, null=True ,related_name='big_product')
-    small_category = models.ForeignKey(SmallCategory, on_delete=models.SET_NULL, null=True, related_name='middle_product')
+    small_category = models.ForeignKey(SmallCategory, on_delete=models.SET_NULL, null=True, related_name='small_product')
     name = models.CharField(max_length=255, verbose_name="Nomi")
     image = models.ImageField(upload_to='products/', verbose_name="Rasm", null=True)
     price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="Narxi", blank=True, null=True)

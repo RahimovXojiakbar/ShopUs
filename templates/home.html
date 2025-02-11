@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
 {% block content %} 
 {% load static %}
- <section class="product arrival">
+
+
+
+    <section class="product arrival">
         <div class="container">
             <div class="section-title">
-                <h5>NEW ARRIVALS</h5>
+                <h5>NEW PRODUCTS</h5>
                 <a href="product-sidebar.html" class="view">View All</a>
             </div>
             <div class="arrival-section">
@@ -12,7 +15,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="product-wrapper" data-aos="fade-up">
                             <div class="product-img">
-                                <img src="{% static './assets/images/homepage-one/product-img/product-img-1.webp' %}"
+                                <img src="{% static 'assets/images/homepage-one/product-img/istockphoto-598141682-1024x1024.jpg' %}"
                                     alt="product-img">
                                 <div class="product-cart-items">
                                     <a href="#" class="favourite cart-item">
@@ -31,7 +34,7 @@
                             </div>
                             <div class="product-info">
                                 <div class="product-description">
-                                    <a href="{% url 'product-detil' %}" class="product-details">Rainbow Sequin Dress
+                                    <a href="{% url 'product-detail' %}" class="product-details">Rainbow Sequin Dress
                                     </a>
                                     <div class="price">
                                         <span class="new-price">$6.99</span>
@@ -46,7 +49,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="product-wrapper" data-aos="fade-up">
                             <div class="product-img">
-                                <img src="{% static './assets/images/homepage-one/product-img/product-img-1.webp' %}"
+                                <img src="{% static 'assets/images/homepage-one/product-img/istockphoto-483663073-1024x1024.jpg' %}"
                                     alt="product-img">
                                 <div class="product-cart-items">
                                     <a href="#" class="favourite cart-item">
@@ -294,7 +297,7 @@
                         <div class="product-wrapper" data-aos="fade-right" data-aos-duration="100">
                             <div class="product-img">
                                 <a href="#">
-                                    <img src="{% static './assets/images/homepage-one/product-img/product-img-5.webp' %}"
+                                    <img src="{% static 'assets/images/homepage-one/product-img/istockphoto-483663073-1024x1024.jpg' %}"
                                         alt="product-img">
                                 </a>
                                 <div class="product-cart-items">
@@ -470,7 +473,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="product-wrapper" data-aos="fade-right">
                             <div class="product-img">
-                                <img src="{% static './assets/images/homepage-one/product-img/product-img-5.webp' %}"
+                                <img src="{% static 'assets/images/homepage-one/product-img/istockphoto-483663073-1024x1024.jpg' %}"
                                     alt="product-img">
                                 <div class="product-cart-items">
                                     
@@ -735,7 +738,6 @@
                                     <a href="product-info.html" class="product-details">Leather Dress Shoes
                                     </a>
                                     <div class="price">
-                                        <span class="price-cut">$22.99</span>
                                         <span class="new-price">$13.99</span>
                                     </div>
                                 </div>

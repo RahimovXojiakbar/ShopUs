@@ -1,10 +1,13 @@
 from . import views
 from django.urls import path    
-from .views import product_detail
+from .import views
 
 urlpatterns = [
-   path('product/<str:uuid>/', product_detail, name='product_detail'),
    path('', views.index_view, name='home'),
-   path('product-detail', views.detail_view, name='product-detil')
+   path('comment/<str:uuid>/', views.comment_view, name='comment'),
+   path('detail/', views.detail_view, name='product-detail'),
+   path('news/', views.new_products, name='new_products'),
+   path('search/', views.search_view, name='search'),
+
 ]
 
